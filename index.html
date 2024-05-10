@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            margin-top: 80px;
+            background: black;
+           /* flex-direction: column; */
+           /* background-color: black; */
+        }
+        .c1:active{
+            /* background: transparent; */
+            color: white; 
+            background-color:black;
+            color:greenyellow;
+            border: 2px solid gold;
+            /* border-radius: 50px; */
+            position:relative ; 
+              
+        }
+
+    </style>
+</head>
+<body>
+    <div id="bb"></div>
+    <div id="cc"></div>
+    <div id="body">
+        <div id="bul"></div>
+        <h3 class="otp">OTP</h3>
+        <img src="../pics/my pics/df.jpeg" alt="" height="200" width="200">
+        <button class="c1">click here</button>
+    </div>
+
+    <script>
+        getb=document.querySelector("#body")
+        getb.style.backgroundColor="black"
+        getb.style.border="5px solid "
+        getb.style.height="500px"
+        getb.style.width="500px"
+        getb.style.display="flex"
+        getb.style. justifyContent="center";
+        getb.style.alignItems="center";
+        getb.style.flexDirection="column";
+        getb.style.gap="10px"
+        getb.style.borderRadius= "10px";
+
+        let getbut=document.querySelector(".c1")
+            getbut.style.height="30px"
+            getbut.style.width="150px"
+            getbut.style.padding="10px"
+            getbut.style.display="flex"
+            getbut.style.justifyContent="center"
+            getbut.style.alignItems="center"
+            getbut.style.fontSize="20px"
+
+              function randomColor(){
+            let letters="0123456789ABCDEF"
+            let color="#"
+            for(i=0;i<6;i++){
+                color+=letters[Math.floor(Math.random()*16)]
+            }
+            return color;   
+        }
+    
+        getbut.addEventListener("click",()=>{
+            document.body.style.backgroundColor = randomColor()
+            getb.style.borderColor= randomColor()
+            getotp.style.color = randomColor()
+            getbb.style.boxShadow="0px 0px 10px 20px  " + randomColor()
+            getcc.style.boxShadow="0px 0px 10px 20px  " + randomColor()
+            getbut.style.color= randomColor()
+            let res=""
+        for(i=0;i<4;i++){
+            res+=Math.floor(Math.random()*9);
+        }
+            getotp.innerHTML=res
+            
+        });
+
+        let getotp=document.getElementsByClassName("otp")[0]
+            getotp.style.border="5px solid gold"
+            // getotp.style.color="white"
+            getotp.style.padding="10px"
+            getotp.style.width="70px"
+            getotp.style.height="70px"
+            getotp.style.display="flex"
+            getotp.style.justifyContent="center"
+            getotp.style.alignItems="center"
+            getotp.style.borderRadius= "50px";
+            getotp.style.fontSize="30px"
+
+       let getbb=document.getElementById("bb")
+           getbb.style.height="50px"
+           getbb.style.width="50px"
+        //    getbb.style.border="1px solid white"
+           getbb.style.position="absolute" 
+           getbb.style.marginLeft="330px"
+           getbb.style.marginTop="30px"
+           getbb.style.borderRadius= "50px";
+
+        let getcc=document.getElementById("cc")
+           getcc.style.height="50px"
+           getcc.style.width="50px"
+        //    getcc.style.border="1px solid white"
+           getcc.style.position="absolute" 
+           getcc.style.marginRight="330px"
+           getcc.style.marginTop="30px"
+           getcc.style.borderRadius= "50px";
+
+    </script>
+</body>
+</html>
